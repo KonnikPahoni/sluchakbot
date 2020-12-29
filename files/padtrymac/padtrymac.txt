@@ -1,0 +1,15 @@
+Text=
+Дзейнасць па абароне моўных правоў можна падтрымаць праз платформу «Талака» па <b><a href="https://www.talaka.org/projects/2715/overview">гэтай спасылцы</a></b>
+
+Калі гэты варыянт для вас не вельмі зручны, напішыце мне <b><a href="https://www.facebook.com/ihar.sluchak">ў Facebook</a></b> і мы знойдзем іншы варыянт.
+
+Дзякуй! Абаронім мову разам!
+=EndText
+DoubleButtons=
+local
+/main.txt
+⬅ На галоўную
+link
+https://www.talaka.org/projects/2715/overview
+❤️ Падтрымаць!
+=DoubleButton

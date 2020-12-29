@@ -1,0 +1,16 @@
+Image=
+/padtrymka/poster.jpg
+=EndImage
+Text=
+Бот створаны ініцыятывай «Умовы для мовы».
+
+Тэхнічная падтрымка: @KonnikPahoni
+=EndText
+DoubleButtons=
+local
+/main.txt
+⬅ На галоўную
+local
+/padtrymac/padtrymac.txt
+💰 Падтрымаць!
+=DoubleButton

@@ -1,0 +1,31 @@
+Text=
+Прывітанне! Чым магу дапамагчы?
+=EndText
+Buttons=
+local
+/daslac_zvarot/daslac_zvarot.txt
+📁 Як даслаць зварот за беларускую мову?
+local
+/atrymac_dacument/atrymac_dacument.txt
+📁 Хачу атрымаць дакумент па-беларуску!
+local
+/hacu_viedac/hacu_viedac.txt
+ℹ️ Хачу ведаць усё пра звароты!
+link
+https://svaje.by/zakony
+⚖️ Вытрымкі з законаў
+link
+https://svaje.by/
+🗺️ Мапа беларускамоўных месцаў
+local
+/chto_taki/chto_taki.txt
+👮 Хто ты такі, Ігар Случак?
+=EndButtons
+DoubleButtons=
+local
+/padtrymka/padtrymka.txt
+🌍 Пра бота
+local
+/padtrymac/padtrymac.txt
+💰 Падтрымаць!
+=EndDoubleButtons
