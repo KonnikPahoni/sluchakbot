@@ -10,7 +10,7 @@ class Logger:
 
         if not os.path.isfile(self.__filename):
             with open(self.__filename, "w") as logging_file:
-                logging_file.write(datetime.datetime.now().isoformat() + ' FILE CREATED' + '\n')
+                logging_file.write('')
 
         self.write('BOT LAUNCHED')
 

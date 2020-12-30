@@ -1,3 +1,5 @@
+import os
+
 import telegram
 
 
@@ -9,9 +11,7 @@ class Parser:
         self.__markup = []
         self.__file = None
 
-        if_file_path = path[:5]
-
-        if if_file_path != 'file=':
+        if path[:5] != 'file=':
             file = open('files' + path, "r", encoding='utf-8')
             while True:
                 line = file.readline()
@@ -59,7 +59,12 @@ class Parser:
                         self.__markup.append(button_row)
             file.close()
         else:
-            self.__file = if_file_path
+            self.__file = path[5:]
+
+    def get_file(self):
+        if self.__file and os.path.isfile('files' + self.__file):
+            return open('files' + self.__file, "rb")
+        return False
 
     def get_text(self):
         return self.__text

@@ -15,7 +15,7 @@ Text=
 - <a href="https://naviny.media/article/20170120/1484929169-byvshego-milicionera-budut-sudit-za-oskorblenie-belorusskogo-yazyka">Бывшего милиционера будут судить за оскорбление белорусского языка</a>
 - <a href="https://naviny.media/article/20200711/1594444724-yak-belarusizuyuc-kvitki-gramadskaga-transpartu-na-prykladze-magilyova">Як беларусізуюць квіткі грамадскага транспарту на прыкладзе Магілёва</a>
 - <a href="https://novychas.by/kultura/alina-nahornaja-i-ihar-sluczak-padaravali-sluckim">Аліна Нагорная і Ігар Случак падаравалі слуцкім дзецям «Кошык вожыка»</a>
-- <a href="https://m.nashaniva.by/articles/193889/?mo=8375d919d47df26d2f1d4cf3b5d3bee95dd7c854">«Здаралася, па 20 пагроз на дзень ад расіян прыходзіла» — гутарка з культавым абаронцам мовы Ігарам Случаком</a>
+- <a href="https://nn.by/?c=ar&i=193889">«Здаралася, па 20 пагроз на дзень ад расіян прыходзіла» — гутарка з культавым абаронцам мовы Ігарам Случаком</a>
 - <a href="https://www.radabnr.org/bnr100-medal-vierasien2019/">Уручэньні Мэдалёў да стагодзьдзя БНР: Валер Булгакаў, Ігар Случак, Алесь Смалянчук</a>
 =EndText
 DoubleButtons=

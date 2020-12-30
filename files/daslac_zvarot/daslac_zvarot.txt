@@ -19,35 +19,14 @@ local
 /daslac_zvarot/sajty/sajty.txt
 📁 На сайтах
 local
-/daslac_zvarot/u_banku.txt
-Беларуская мова ў банку
-local
-/daslac_zvarot/kvitki_u_transparcie.txt
-Квіткі ў грамадскім транспарце
-local
-/daslac_zvarot/kvitki_u_miescach.txt
-Квіткі ў грамадскіх месцах
-local
-/daslac_zvarot/vypiska.txt
-Выпіска да дыплома
-local
-/daslac_zvarot/sport.txt
-У жыцці спартовага клуба
-local
-/daslac_zvarot/electronnaja_carha.txt
-У талонах электроннай чаргі
-local
-/daslac_zvarot/ustanovy.txt
-Беларуская мова ва ўстановах
-local
-/daslac_zvarot/etykietki.txt
-Этыкеткі па-беларуску
+/daslac_zvarot/insaje/insaje.txt
+📁 Іншае
 =EndButtons
 DoubleButtons=
 local
 /main.txt
-⬅ На галоўную
+🏠 На галоўную
 local
 /padtrymac/padtrymac.txt
 💰 Падтрымаць!
-=DoubleButton
+=EndDoubleButtons

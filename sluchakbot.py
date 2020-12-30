@@ -35,30 +35,67 @@ class SluchakBot:
         callback_message = update.callback_query.message
         image_message = parser.get_image(as_media_photo=True)
 
-        if callback_message.reply_to_message:  # If previous photo exists
+        parser_file = parser.get_file()
 
-            if image_message:  # if new photo provided
+        if not parser_file:
 
-                context.bot.edit_message_media(chat_id=callback_message.chat_id,
-                                               message_id=callback_message.reply_to_message.message_id,
-                                               media=image_message)
+            if callback_message.reply_to_message:  # If previous photo exists
 
-                context.bot.edit_message_text(
-                    chat_id=callback_message.chat_id,
-                    message_id=callback_message.message_id,
+                if image_message:  # if new photo provided
+
+                    context.bot.edit_message_media(chat_id=callback_message.chat_id,
+                                                   message_id=callback_message.reply_to_message.message_id,
+                                                   media=image_message)
+
+                    context.bot.edit_message_text(
+                        chat_id=callback_message.chat_id,
+                        message_id=callback_message.message_id,
+                        text=parser.get_text(),
+                        reply_markup=parser.get_markup(),
+                        reply_to_message_id=callback_message.reply_to_message.message_id,
+                        disable_web_page_preview=True,
+                        parse_mode='HTML')
+
+                else:  # if new photo is not provided but previous photo exists
+
+                    context.bot.delete_message(
+                        chat_id=callback_message.chat_id,
+                        message_id=callback_message.reply_to_message.message_id
+                    )
+
+                    context.bot.send_message(
+                        chat_id=callback_message.chat_id,
+                        text=parser.get_text(),
+                        reply_markup=parser.get_markup(),
+                        disable_web_page_preview=True,
+                        parse_mode='HTML')
+
+                    context.bot.delete_message(
+                        chat_id=callback_message.chat_id,
+                        message_id=callback_message.message_id
+                    )
+
+            elif image_message:
+
+                new_image = context.bot.send_photo(
+                    chat_id=update.effective_chat.id,
+                    photo=parser.get_image()
+                )
+
+                context.bot.send_message(
+                    chat_id=update.effective_chat.id,
+                    parse_mode='HTML',
+                    disable_web_page_preview=True,
                     text=parser.get_text(),
                     reply_markup=parser.get_markup(),
-                    reply_to_message_id=callback_message.reply_to_message.message_id,
-                    disable_web_page_preview=True,
-                    parse_mode='HTML')
-
-            else:  # if new photo is not provided but previous photo exists
+                    reply_to_message_id=new_image.message_id)
 
                 context.bot.delete_message(
                     chat_id=callback_message.chat_id,
-                    message_id=callback_message.reply_to_message.message_id
+                    message_id=callback_message.message_id
                 )
 
+            else:
                 context.bot.send_message(
                     chat_id=callback_message.chat_id,
                     text=parser.get_text(),
@@ -66,39 +103,17 @@ class SluchakBot:
                     disable_web_page_preview=True,
                     parse_mode='HTML')
 
-                context.bot.delete_message(
-                    chat_id=callback_message.chat_id,
-                    message_id=callback_message.message_id
-                )
-
-        elif image_message:
-
-            new_image = context.bot.send_photo(
-                chat_id=update.effective_chat.id,
-                photo=parser.get_image()
-            )
-
-            context.bot.send_message(
-                chat_id=update.effective_chat.id,
-                parse_mode='HTML',
-                disable_web_page_preview=True,
-                text=parser.get_text(),
-                reply_markup=parser.get_markup(),
-                reply_to_message_id=new_image.message_id)
-
-            context.bot.delete_message(
-                chat_id=callback_message.chat_id,
-                message_id=callback_message.message_id
-            )
+                context.bot.delete_message(chat_id=callback_message.chat_id,
+                                           message_id=callback_message.message_id
+                                           )
 
         else:
-            context.bot.edit_message_text(
-                chat_id=callback_message.chat_id,
-                message_id=callback_message.message_id,
-                text=parser.get_text(),
-                reply_markup=parser.get_markup(),
-                disable_web_page_preview=True,
-                parse_mode='HTML')
+            context.bot.send_document(
+                chat_id=update.effective_chat.id,
+                document=parser_file)
+            context.bot.answer_callback_query(
+                callback_query_id=update.callback_query.id
+            )
 
     def __init__(self, telegram_token_text):
         self.updater = Updater(token=telegram_token_text, use_context=True)

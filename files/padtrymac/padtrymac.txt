@@ -8,7 +8,7 @@ Text=
 DoubleButtons=
 local
 /main.txt
-⬅ На галоўную
+🏠 На галоўную
 link
 https://www.talaka.org/projects/2715/overview
 ❤️ Падтрымаць!

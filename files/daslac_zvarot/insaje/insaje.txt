@@ -1,0 +1,41 @@
+Text=
+Ніжэй вы знойдзеце прыклады зваротаў. Карыстайцеся і беларускай мовы вакол нас будзе больш!
+
+Калі вы маеце заўвагі ці прапановы па зваротах, напішыце мне <a href="https://www.facebook.com/ihar.sluchak">ў Facebook</a>. 
+
+Мы зараз ствараем базу адказаў на звароты за беларускую мову, будзем удзячныя, калі вы падзеліцеся вашым адказам. Дашліце адказ сюды: <b>admin@svaje.by</b>
+=EndText
+Buttons=
+local
+/daslac_zvarot/insaje/u_banku/u_banku_first.txt
+Беларуская мова ў банку
+local
+/daslac_zvarot/insaje/u_transparcie/u_transparcie_first.txt
+Квіткі ў грамадскім транспарце
+local
+/daslac_zvarot/insaje/kvitki_u_miescach.txt
+Квіткі ў грамадскіх месцах
+local
+/daslac_zvarot/insaje/vypiska.txt
+Выпіска да дыплома
+local
+/daslac_zvarot/insaje/sport.txt
+У жыцці спартовага клуба
+local
+/daslac_zvarot/insaje/electronnaja_carha.txt
+У талонах электроннай чаргі
+local
+/daslac_zvarot/insaje/ustanovy.txt
+Беларуская мова ва ўстановах
+local
+/daslac_zvarot/insaje/etykietki.txt
+Этыкеткі па-беларуску
+=EndButtons
+DoubleButtons=
+local
+/daslac_zvarot/daslac_zvarot.txt
+⬅ Назад
+local
+/padtrymac/padtrymac.txt
+💰 Падтрымаць!
+=EndDoubleButtons
