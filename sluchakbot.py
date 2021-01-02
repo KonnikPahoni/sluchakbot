@@ -29,10 +29,10 @@ class SluchakBot:
                 users_file.write(datetime.datetime.now().isoformat() + ' FILE CREATED')
         else:
             with open(USERS_FILE, "r") as users_file:
-                self.users = set(users_file.readlines()[1:])
+                self.users = set(map(lambda x: x.strip(), users_file.readlines()[1:]))
 
         with open(ADMINS_FILE, "r") as admins_file:
-            self.admins = set(map(lambda x: x.strip(),admins_file.readlines()))
+            self.admins = set(map(lambda x: x.strip(), admins_file.readlines()))
 
         self.updater.start_polling()
         self.access_logger.write('POLLING STARTED.')
@@ -57,11 +57,11 @@ class SluchakBot:
         self.broadcast_message = update.message.text
 
         context.bot.send_message(
-                    chat_id=update.effective_chat.id,
-                    parse_mode='HTML',
-                    text='<b>Вось як будзе выглядаць вашае паведамленьне:</b>\n\n' + self.broadcast_message +
-                         '\n\n<b>Дашліце /confirm каб пацьвердзіць.</b>',
-            )
+            chat_id=update.effective_chat.id,
+            parse_mode='HTML',
+            text='<b>Вось як будзе выглядаць вашае паведамленьне:</b>\n\n' + self.broadcast_message +
+                 '\n\n<b>Дашліце /confirm каб пацьвердзіць.</b>',
+        )
 
         return BROADCAST_CONFIRMED
 
