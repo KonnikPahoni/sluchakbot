@@ -1,0 +1,34 @@
+Text=
+Абярыце варыянт шыльды (табло, знака), дзе павінна з’явіцца беларуская мова.
+=EndText
+Buttons=
+local
+/zvarot/syldy/znak/znak.txt
+Дарожны знак
+local
+/zvarot/syldy/tablo/tablo.txt
+Электроннае табло
+local
+/zvarot/syldy/novaja/novaja_first.txt
+Новая вуліца, шыльды няма
+local
+/zvarot/syldy/pa_rusku_1/pa_rusku_1.txt
+Шыльда добрая, але па-руску
+local
+/zvarot/syldy/pa_rusku_2/pa_rusku_2.txt
+Шыльда дрэнная і па-руску
+local
+/zvarot/syldy/pamylka/pamylka.txt
+Няправільна транслітаравалі
+local
+/zvarot/syldy/pierajmenavana/pierajmenavana_first.txt
+Вуліца перайменавана, шыльды старыя
+=EndButtons
+DoubleButtons=
+local
+/zvarot/zvarot.txt
+⬅ Назад
+local
+/padtrymac/padtrymac.txt
+💰 Падтрымаць!
+=EndDoubleButtons

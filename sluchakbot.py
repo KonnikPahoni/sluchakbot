@@ -1,23 +1,96 @@
 # coding=utf-8
-
-from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
+import telegram
+from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, ConversationHandler, MessageHandler, Filters
 from file_parser import Parser
 from access_logger import Logger
+import os
+import datetime
 
-LOGGING_FILE = 'files/access_log.txt'
-START_PATH = '/main.txt'
+LOGGING_FILE = 'files/access_log.txt'  # access log file
+USERS_FILE = 'files/users.txt'  # list of user IDs who interacted with the bot
+ADMINS_FILE = 'files/admins.txt'  # list of user IDs who can broadcast
+START_PATH = '/main.txt'  # entry point for the /start command
+TIMEOUT_TIME = 3600  # /broadcast command conversation timeout
+
+BROADCAST_REQUESTED = 0  # Conversation handler return code
+BROADCAST_CONFIRMED = 1  # Conversation handler return code
 
 
 class SluchakBot:
     access_logger = Logger(LOGGING_FILE)
+    users = set()
+    admins = set()
+    broadcast_message = None
 
     def start(self):
+
+        if not os.path.isfile(USERS_FILE):
+            with open(USERS_FILE, "w") as users_file:
+                users_file.write(datetime.datetime.now().isoformat() + ' FILE CREATED')
+        else:
+            with open(USERS_FILE, "r") as users_file:
+                self.users = set(users_file.readlines()[1:])
+
+        with open(ADMINS_FILE, "r") as admins_file:
+            self.admins = set(map(lambda x: x.strip(),admins_file.readlines()))
+
         self.updater.start_polling()
         self.access_logger.write('POLLING STARTED.')
+
+    def __start_broadcast_command(self, update, context):
+
+        if str(update.message.from_user.id) in self.admins:
+            message_line = 'START BROADCAST BY ' + str(update.message.from_user)
+            self.access_logger.write(message_line)
+            context.bot.send_message(
+                chat_id=update.effective_chat.id,
+                parse_mode='HTML',
+                disable_web_page_preview=True,
+                text="Паведамленьне атрымаюць " + str(
+                    len(self.users)) + " карыстальнікаў. Калі ласка, дашліце мне тэкст паведамленьня.",
+            )
+
+        return BROADCAST_REQUESTED
+
+    def __confirm_broadcast(self, update, context):
+
+        self.broadcast_message = update.message.text
+
+        context.bot.send_message(
+                    chat_id=update.effective_chat.id,
+                    parse_mode='HTML',
+                    text='<b>Вось як будзе выглядаць вашае паведамленьне:</b>\n\n' + self.broadcast_message +
+                         '\n\n<b>Дашліце /confirm каб пацьвердзіць.</b>',
+            )
+
+        return BROADCAST_CONFIRMED
+
+    def __broadcast_command(self, update, context):
+        print(self.admins)
+        if str(update.message.from_user.id) in self.admins:
+            message_line = 'BROADCAST ' + self.broadcast_message
+            self.access_logger.write(message_line)
+            for user_id in self.users:
+                context.bot.send_message(
+                    chat_id=user_id,
+                    parse_mode='HTML',
+                    disable_web_page_preview=True,
+                    text=self.broadcast_message,
+                    reply_markup=telegram.InlineKeyboardMarkup(
+                        [[telegram.InlineKeyboardButton(text='Перайсці да размовы з СЛУЧАКом',
+                                                        callback_data=START_PATH)]])
+                )
+        return ConversationHandler.END
 
     def __start_command(self, update, context):
         message_line = 'START ' + str(update.message.from_user)
         self.access_logger.write(message_line)
+
+        user_id = str(update.message.from_user.id)
+        if user_id not in self.users:
+            with open(USERS_FILE, "a") as users_file:
+                users_file.write('\n' + user_id)
+                self.users.add(user_id.strip())
 
         parser = Parser(START_PATH)
         context.bot.send_message(
@@ -115,12 +188,29 @@ class SluchakBot:
                 callback_query_id=update.callback_query.id
             )
 
+    @staticmethod
+    def __cancel_command(update, context):
+        return ConversationHandler.END
+
     def __init__(self, telegram_token_text):
         self.updater = Updater(token=telegram_token_text, use_context=True)
+
         start_handler = CommandHandler('start', self.__start_command)
-        self.updater.dispatcher.add_handler(start_handler)
+        cancel_handler = CommandHandler('cancel', self.__cancel_command)
+        broadcast_handler = ConversationHandler(
+            entry_points=[CommandHandler('broadcast', self.__start_broadcast_command)],
+            states={
+                BROADCAST_REQUESTED: [MessageHandler(Filters.all, self.__confirm_broadcast)],
+                BROADCAST_CONFIRMED: [CommandHandler('confirm', self.__broadcast_command)],
+                ConversationHandler.TIMEOUT: [cancel_handler]},
+            fallbacks=[cancel_handler],
+            conversation_timeout=TIMEOUT_TIME)
         button_handler = CallbackQueryHandler(self.__callback)
+
+        self.updater.dispatcher.add_handler(start_handler)
+        self.updater.dispatcher.add_handler(broadcast_handler)
         self.updater.dispatcher.add_handler(button_handler)
+        self.updater.dispatcher.add_handler(cancel_handler)
 
 
 if __name__ == "__main__":

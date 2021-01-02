@@ -1,0 +1,42 @@
+Text=
+Ніжэй вы знойдзеце прыклады дакументаў. Карыстайцеся і беларускай мовы вакол нас будзе больш!
+
+Калі вы маеце заўвагі ці прапановы па зваротах, напішыце мне <a href="https://www.facebook.com/ihar.sluchak">ў Facebook</a>. 
+=EndText
+Buttons=
+local
+/doc/daveranasci/daveranasci.txt
+📁 Даверанасці
+local
+/doc/damovy_auto/damovy_auto.txt
+📁 Дакументы на аўто
+local
+/doc/damovy/damovy.txt
+📁 Дамовы
+local
+/doc/insaje/insaje.txt
+📁 Іншыя дакументы і бланкі
+local
+/doc/praca/praca.txt
+📁 Працоўныя стасункі
+local
+/doc/jur_asoba/jur_asoba.txt
+📁 Рэгуляванне дзейнасці юр. асобы
+local
+/doc/tastamenty/tastamenty_1.txt
+📁 Спадчына (тастаменты)
+local
+/doc/sud/sud_1.txt
+📁 Суд і іскавыя заявы
+local
+/doc/siamja/siamja.txt
+📁 Сямейныя стасункі
+=EndButtons
+DoubleButtons=
+local
+/main.txt
+🏠 На галоўную
+local
+/padtrymac/padtrymac.txt
+💰 Падтрымаць!
+=EndDoubleButtons

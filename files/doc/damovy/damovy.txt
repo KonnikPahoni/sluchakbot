@@ -1,0 +1,44 @@
+Text=
+<b>Дамовы</b>:
+
+1. Акт выкананых работ
+2. Дагавор арэнды транспартнага сродку з экіпажам
+3. Дамова аб здзяйсненні рэкламных паслуг
+4. Дамова камісіi
+5. Дамова куплі-продажу
+6. Дамова на аказанне паслуг
+7. Працоўная дамова
+8. Рахунак-фактура
+=EndText
+DoubleButtons=
+local
+file=/doc/damovy/akt_vykananych_rabot.rtf
+⬇️ Атрымаць 1
+local
+file=/doc/damovy/transpartnaha_srodku.docx
+⬇️ Атрымаць 2
+local
+file=/doc/damovy/ab_zdziajsnienni.doc
+⬇️ Атрымаць 3
+local
+file=/doc/damovy/damova_kamisii.rtf
+⬇️ Атрымаць 4
+local
+file=/doc/damovy/kupli-prodazu.rtf
+⬇️ Атрымаць 5
+local
+file=/doc/damovy/na_akazannie_pasluh.rtf
+⬇️ Атрымаць 6
+local
+file=/doc/damovy/pracounaja_damova.rtf
+⬇️ Атрымаць 7
+local
+file=/doc/damovy/rachunak-faktura.xls
+⬇️ Атрымаць 8
+local
+/doc/doc.txt
+⬅ Назад
+local
+/padtrymac/padtrymac.txt
+💰 Падтрымаць!
+=EndDoubleButtons

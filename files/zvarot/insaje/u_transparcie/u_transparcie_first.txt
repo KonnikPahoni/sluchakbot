@@ -1,0 +1,23 @@
+Text=
+Скапіюйце гэты зварот, дапоўніце яго і дашліце сюды: https://mintrans.gov.by/ru/obraschenia-fiz/
+А таксама, на <a href="https://svaje.by/vykankam">гэтай старонцы</a> абярыце выканкам, на тэрыторыі якога знаходзіцца перавозчык, і дашліце копію туды.
+=EndText
+Buttons=
+local
+/zvarot/insaje/u_transparcie/u_transparcie_second.txt
+Праглядзець тэкст
+=EndButtons
+DoubleButtons=
+local
+/zvarot/insaje/insaje.txt
+⬅ Назад
+local
+file=/zvarot/insaje/u_transparcie/u_transparcie.docx
+⬇️ Атрымаць файл
+local
+/main.txt
+🏠 На галоўную
+local
+/padtrymac/padtrymac.txt
+💰 Падтрымаць!
+=EndDoubleButtons

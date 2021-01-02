@@ -21,5 +21,5 @@ class Logger:
     def write(self, line):
         formatted_line = datetime.datetime.now().isoformat() + ' ' + line
         self.__print(formatted_line)
-        with open(self.__filename, "a") as logging_file:
+        with open(self.__filename, "a", encoding="utf-8") as logging_file:
             logging_file.write(formatted_line + '\n')

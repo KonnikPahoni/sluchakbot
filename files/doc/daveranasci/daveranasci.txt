@@ -1,0 +1,28 @@
+Text=
+<b>Даверанасці</b>:
+
+1. Даверанасць аб учыненні здзелкі
+2. Даверанасць на вядзенне ў судзе грамадскай справы
+3. Даверанасць у парадку перадавер'я
+4. Даверанасць
+=EndText
+DoubleButtons=
+local
+file=/doc/daveranasci/zdzielka.docx
+⬇️ Атрымаць 1
+local
+file=/doc/daveranasci/u_sudzie.docx
+⬇️ Атрымаць 2
+local
+file=/doc/daveranasci/peradaverje.docx
+⬇️ Атрымаць 3
+local
+file=/doc/daveranasci/daveranasc.rtf
+⬇️ Атрымаць 4
+local
+/doc/doc.txt
+⬅ Назад
+local
+/padtrymac/padtrymac.txt
+💰 Падтрымаць!
+=EndDoubleButtons

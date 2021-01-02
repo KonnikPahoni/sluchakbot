@@ -1,4 +1,6 @@
 .idea
 telegram_token
 files/access_log.txt
+files/users.txt
+files/admins.txt
 dev
