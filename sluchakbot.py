@@ -1,19 +1,23 @@
 # coding=utf-8
+import time
+
 import telegram
+from environs import Env
+from telegram.error import NetworkError
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, ConversationHandler, MessageHandler, Filters
 from file_parser import Parser
 from access_logger import Logger
 import os
 import datetime
 
-LOGGING_FILE = 'files/access_log.txt'  # access log file
-USERS_FILE = 'files/users.txt'  # list of user IDs who interacted with the bot
-ADMINS_FILE = 'files/admins.txt'  # list of user IDs who can broadcast
+LOGGING_FILE = 'var/access_log.txt'  # access log file
+USERS_FILE = 'var/users.txt'  # list of user IDs who interacted with the bot
 START_PATH = '/main.txt'  # entry point for the /start command
 TIMEOUT_TIME = 3600  # /broadcast command conversation timeout
 
 BROADCAST_REQUESTED = 0  # Conversation handler return code
 BROADCAST_CONFIRMED = 1  # Conversation handler return code
+RECONNECT_INTERVAL = 5
 
 
 class SluchakBot:
@@ -31,11 +35,18 @@ class SluchakBot:
             with open(USERS_FILE, "r") as users_file:
                 self.users = set(map(lambda x: x.strip(), users_file.readlines()[1:]))
 
-        with open(ADMINS_FILE, "r") as admins_file:
-            self.admins = set(map(lambda x: x.strip(), admins_file.readlines()))
+        self.admins = set(env.list('ADMIN_ID'))
 
-        self.updater.start_polling()
-        self.access_logger.write('POLLING STARTED.')
+        self.access_logger.write('POLLING STARTED')
+
+        while True:
+            try:
+                self.updater.start_polling()
+            except NetworkError as e:
+                self.access_logger.write('Network error. Reconnecting in ' + str(RECONNECT_INTERVAL) + ' seconds')
+                time.sleep(RECONNECT_INTERVAL)
+            except KeyboardInterrupt:
+                self.access_logger.write('POLLING STOPPING')
 
     def __start_broadcast_command(self, update, context):
 
@@ -214,7 +225,9 @@ class SluchakBot:
 
 
 if __name__ == "__main__":
-    with open('telegram_token') as telegram_token_file:
-        telegram_token = telegram_token_file.readline()
-    sluchak_bot = SluchakBot(telegram_token)
+    env = Env()
+    env.read_env()
+    TELEGRAM_TOKEN = str(os.environ['TELEGRAM_TOKEN'])
+
+    sluchak_bot = SluchakBot(TELEGRAM_TOKEN)
     sluchak_bot.start()
