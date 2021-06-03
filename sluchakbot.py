@@ -81,6 +81,7 @@ class SluchakBot:
         if str(update.message.from_user.id) in self.admins:
             message_line = 'BROADCAST ' + self.broadcast_message
             self.access_logger.write(message_line)
+            messages_sent = 0
             for user_id in self.users:
                 try:
                     context.bot.send_message(
@@ -92,8 +93,15 @@ class SluchakBot:
                             [[telegram.InlineKeyboardButton(text='Перайсці да размовы з СЛУЧАКом',
                                                             callback_data=START_PATH)]])
                     )
-                except telegram.error.Unauthorized as e:
-                    self.access_logger.write('BLOCKED BY USER ' + user_id)
+                    messages_sent += 1
+                except (telegram.error.Unauthorized, telegram.error.BadRequest) as e:
+                    self.access_logger.write('BOT STOPPED BY USER ' + user_id)
+
+            context.bot.send_message(
+                chat_id=update.message.from_user.id,
+                text=str(messages_sent) + ' паведамленняў даслана. ' + str(
+                    len(self.users) - messages_sent) + ' карыстальнікаў спынілі бота.',
+            )
         return ConversationHandler.END
 
     def __start_command(self, update, context):
