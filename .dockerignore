@@ -1,0 +1,8 @@
+*
+!files
+!var
+!access_logger.py
+!sluchakbot.py
+!file_parser.py
+!requirements.txt
+!.env

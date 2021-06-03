@@ -1,3 +1,5 @@
 .idea
 /.env
 /var/
+/dev/
+/analysis/

@@ -82,15 +82,18 @@ class SluchakBot:
             message_line = 'BROADCAST ' + self.broadcast_message
             self.access_logger.write(message_line)
             for user_id in self.users:
-                context.bot.send_message(
-                    chat_id=user_id,
-                    parse_mode='HTML',
-                    disable_web_page_preview=True,
-                    text=self.broadcast_message,
-                    reply_markup=telegram.InlineKeyboardMarkup(
-                        [[telegram.InlineKeyboardButton(text='Перайсці да размовы з СЛУЧАКом',
-                                                        callback_data=START_PATH)]])
-                )
+                try:
+                    context.bot.send_message(
+                        chat_id=user_id,
+                        parse_mode='HTML',
+                        disable_web_page_preview=True,
+                        text=self.broadcast_message,
+                        reply_markup=telegram.InlineKeyboardMarkup(
+                            [[telegram.InlineKeyboardButton(text='Перайсці да размовы з СЛУЧАКом',
+                                                            callback_data=START_PATH)]])
+                    )
+                except telegram.error.Unauthorized as e:
+                    self.access_logger.write('BLOCKED BY USER ' + user_id)
         return ConversationHandler.END
 
     def __start_command(self, update, context):
