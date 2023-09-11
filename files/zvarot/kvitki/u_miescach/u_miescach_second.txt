@@ -17,10 +17,10 @@ Text=
 =EndText
 DoubleButtons=
 local
-/zvarot/insaje/insaje.txt
+/zvarot/kvitki/kvitki.txt
 ⬅ Назад
 local
-file=/zvarot/insaje/u_miescachh/u_miescach.docx
+file=/zvarot/kvitki/u_miescach/u_miescach.docx
 ⬇️ Атрымаць файл
 local
 /main.txt

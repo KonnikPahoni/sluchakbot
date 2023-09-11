@@ -1,21 +1,19 @@
 Text=
 Гэты зварот трэба скапіяваць, дапоўніць і даслаць сюды: http://www.government.by/be/feedbackformc.
 
-А таксама абраць тут: https://svaje.by/vykankamy неабходны выканкам, на тэрыторыі якога знаходзіцца месца і даслаць яго і ў гэты выканкам. 
-
 Таксама можна знайсці мэйл месца і даслаць зварот на мэйл.
 =EndText
 Buttons=
 local
-/zvarot/insaje/u_miescach/u_miescach_second.txt
+/zvarot/kvitki/u_miescach/u_miescach_second.txt
 Праглядзець тэкст
 =EndButtons
 DoubleButtons=
 local
-/zvarot/insaje/insaje.txt
+/zvarot/kvitki/kvitki.txt
 ⬅ Назад
 local
-file=/zvarot/insaje/u_miescach/u_miescach.docx
+file=/zvarot/kvitki/u_miescach/u_miescach.docx
 ⬇️ Атрымаць файл
 local
 /main.txt

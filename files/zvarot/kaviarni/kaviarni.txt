@@ -1,0 +1,31 @@
+Text=
+З дапамогай гэтых зваротаў вы можаце дадаць беларускую мову ў меню, а таксама абараніць свае моўныя правы, калі вашую мову не разумеюць у кавярні або рэстарацыі ☀️
+=EndText
+Buttons=
+local
+/zvarot/kaviarni/kamunikacyja_zajava.txt
+Камунікацыя. Заява
+local
+/zvarot/kaviarni/kamunikacyja_zvarot.txt
+Камунікацыя. Зварот
+local
+/zvarot/kaviarni/mieniu_zajava.txt
+Меню. Заява
+local
+/zvarot/kaviarni/mieniu_zvarot.txt
+Меню. Зварот
+local
+/zvarot/kaviarni/nie_zrazumieli_movu_zajava.txt
+Не зразумелі мову. Заява
+local
+/zvarot/kaviarni/nie_zrazumieli_movu_zvarot.txt
+Не зразумелі мову. Зварот
+=EndButtons
+DoubleButtons=
+local
+/zvarot/zvarot.txt
+⬅ Назад
+local
+/padtrymac/padtrymac.txt
+💰 Падтрымаць!
+=EndDoubleButtons

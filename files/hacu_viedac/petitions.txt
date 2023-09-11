@@ -33,9 +33,6 @@ local
 local
 /hacu_viedac/aby_sto.txt
 Адказалі абы-што
-link
-https://svaje.by/vykankamy
-Спіс усіх выканкамаў Беларусі
 =EndButtons
 DoubleButtons=
 local

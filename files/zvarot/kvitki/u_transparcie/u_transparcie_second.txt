@@ -15,10 +15,10 @@ Text=
 =EndText
 DoubleButtons=
 local
-/zvarot/insaje/insaje.txt
+/zvarot/kvitki/kvitki.txt
 ⬅ Назад
 local
-file=/zvarot/insaje/u_transparcie/u_transparcie.docx
+file=/zvarot/kvitki/u_transparcie/u_transparcie.docx
 ⬇️ Атрымаць файл
 local
 /main.txt

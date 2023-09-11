@@ -31,6 +31,9 @@ local
 local
 /zvarot/abraza/internet_nielha.txt
 Абраза ў інтэрнэце (імя не вядомае)
+local
+/zvarot/abraza/pierashkoda_karystacca_movaj.txt
+Перашкода карыстацца мовай
 =EndButtons
 DoubleButtons=
 local

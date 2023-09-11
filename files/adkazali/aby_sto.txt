@@ -19,32 +19,17 @@ Text=
 =EndText
 Buttons=
 local
-/hacu_viedac/hacu_viedac.txt
-Чаму вам варта напісаць зварот?
-local
-/hacu_viedac/sto_pavinna_byc.txt
-Што павінна быць у звароце?
-local
-/hacu_viedac/kudy_dasylac.txt
-Як і куды дасылаць зварот?
-local
-/hacu_viedac/adkaz.txt
-Як хутка прыйдзе адказ?
-local
-/hacu_viedac/petitions.txt
-Пра калектыўныя звароты (петыцыі)
-local
-/hacu_viedac/adkaz_ne_pryjsou.txt
+/adkazali/adkaz_ne_pryjsou.txt
 Адказ не прыйшоў у тэрмін
 local
-/hacu_viedac/na_ruskaj.txt
+/adkazali/na_ruskaj.txt
 Прыйшоў адказ на рускай мове
 local
-/hacu_viedac/blank_na_ruskaj.txt
-Бланк установы па-руску
-local
-/hacu_viedac/z_pamylkami.txt
+/adkazali/z_pamylkami.txt
 Па-беларуску пішуць з памылкамі
+local
+/adkazali/blank_na_ruskaj.txt
+Бланк установы па-руску
 =EndButtons
 DoubleButtons=
 local

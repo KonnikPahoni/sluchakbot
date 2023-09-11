@@ -3,18 +3,12 @@ Text=
 
 Калі вы маеце заўвагі ці прапановы па зваротах, напішыце мне <a href="https://www.facebook.com/ihar.sluchak">ў Facebook</a>. 
 
-Мы зараз ствараем базу адказаў на звароты за беларускую мову, будзем удзячныя, калі вы падзеліцеся вашым адказам. Дашліце адказ сюды: <b>admin@svaje.by</b>
+Мы зараз ствараем базу адказаў на звароты за беларускую мову, будзем удзячныя, калі вы падзеліцеся вашым адказам. Дашліце адказ сюды: <b>our.mova@gmail.com</b>
 =EndText
 Buttons=
 local
 /zvarot/insaje/u_banku/u_banku_first.txt
 Беларуская мова ў банку
-local
-/zvarot/insaje/u_transparcie/u_transparcie_first.txt
-Квіткі ў грамадскім транспарце
-local
-/zvarot/insaje/u_miescach/u_miescach_first.txt
-Квіткі ў грамадскіх месцах
 local
 /zvarot/insaje/vypiska.txt
 Выпіска да дыплома
@@ -28,8 +22,11 @@ local
 /zvarot/insaje/ustanovy.txt
 Беларуская мова ва ўстановах
 local
-/zvarot/insaje/etykietki.txt
-Этыкеткі па-беларуску
+/zvarot/insaje/na_vajskovym_biliecie.txt
+На вайсковым білеце
+local
+/zvarot/insaje/sms_ad_dziarz_ustanovy.txt
+СМС ад дзяржаўнай установы
 =EndButtons
 DoubleButtons=
 local

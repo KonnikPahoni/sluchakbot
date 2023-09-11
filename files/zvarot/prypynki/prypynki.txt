@@ -1,0 +1,19 @@
+Text=
+З дапамогай гэтых зваротаў вы можаце дадаць беларускую мову на шыльду з раскладам руху на транспартным прыпынку ☀️
+=EndText
+Buttons=
+local
+/zvarot/prypynki/prypynak_shylda_pa_rusku.txt
+Шыльда па-руску
+local
+/zvarot/prypynki/prypynak_shyldy_niama.txt
+Шыльды няма ці пашкоджаная
+=EndButtons
+DoubleButtons=
+local
+/zvarot/zvarot.txt
+⬅ Назад
+local
+/padtrymac/padtrymac.txt
+💰 Падтрымаць!
+=EndDoubleButtons

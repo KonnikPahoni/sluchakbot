@@ -32,10 +32,10 @@ Text=
 =EndText
 DoubleButtons=
 local
-/zvarot/insaje/insaje.txt
+/zvarot/vytvorcy/vytvorcy.txt
 ⬅ Назад
 local
-file=/zvarot/insaje/etykietki.docx
+file=/zvarot/vytvorcy/etykietki.docx
 ⬇️ Атрымаць файл
 local
 /main.txt

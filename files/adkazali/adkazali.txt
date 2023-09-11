@@ -1,0 +1,28 @@
+Text=
+Тэкст для старонкі АДКАЗАЛІ
+=EndText
+Buttons=
+local
+/adkazali/adkaz_ne_pryjsou.txt
+Адказ не прыйшоў у тэрмін
+local
+/adkazali/na_ruskaj.txt
+Прыйшоў адказ на рускай мове
+local
+/adkazali/z_pamylkami.txt
+Па-беларуску пішуць з памылкамі
+local
+/adkazali/blank_na_ruskaj.txt
+Бланк установы па-руску
+local
+/adkazali/aby_sto.txt
+Адказалі абы-што
+=EndButtons
+DoubleButtons=
+local
+/main.txt
+🏠 На галоўную
+local
+/padtrymac/padtrymac.txt
+💰 Падтрымаць!
+=DoubleButton
