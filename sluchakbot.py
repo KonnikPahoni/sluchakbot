@@ -47,7 +47,7 @@ class SluchakBot:
 
         while True:
             try:
-                self.updater.start_polling(poll_interval=10)
+                self.updater.start_polling()
             except NetworkError as e:
                 self.access_logger.write(
                     "Network error. Reconnecting in "
