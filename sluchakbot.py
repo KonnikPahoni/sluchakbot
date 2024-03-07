@@ -42,21 +42,8 @@ class SluchakBot:
                 self.users = set(map(lambda x: x.strip(), users_file.readlines()[1:]))
 
         self.admins = set(env.list("ADMIN_ID"))
-
         self.access_logger.write("POLLING STARTED")
-
-        while True:
-            try:
-                self.updater.start_polling()
-            except NetworkError as e:
-                self.access_logger.write(
-                    "Network error. Reconnecting in "
-                    + str(RECONNECT_INTERVAL)
-                    + " seconds"
-                )
-                time.sleep(RECONNECT_INTERVAL)
-            except KeyboardInterrupt:
-                self.access_logger.write("POLLING STOPPING")
+        self.updater.start_polling()
 
     def __start_broadcast_command(self, update, context):
         if str(update.message.from_user.id) in self.admins:
