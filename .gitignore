@@ -1,5 +1,7 @@
 .idea
 /.env
+/.venv
 /var/
 /dev/
 /analysis/
+__pycache__/
