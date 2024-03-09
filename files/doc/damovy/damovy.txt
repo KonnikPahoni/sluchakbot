@@ -38,7 +38,7 @@ file=/doc/damovy/rachunak-faktura.xls
 local
 /doc/doc.txt
 ⬅ Назад
-local
-/padtrymac/padtrymac.txt
+link
+https://www.patreon.com/belmova
 💰 Падтрымаць!
 =EndDoubleButtons

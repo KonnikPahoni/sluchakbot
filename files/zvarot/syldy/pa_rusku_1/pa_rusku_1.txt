@@ -24,7 +24,7 @@ file=/zvarot/syldy/pa_rusku_1/pa_rusku_1.docx
 local
 /main.txt
 🏠 На галоўную
-local
-/padtrymac/padtrymac.txt
+link
+https://www.patreon.com/belmova
 💰 Падтрымаць!
 =DoubleButtons

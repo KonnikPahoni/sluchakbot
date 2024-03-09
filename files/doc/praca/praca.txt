@@ -46,7 +46,7 @@ file=/doc/praca/damova.rtf
 local
 /doc/doc.txt
 ⬅ Назад
-local
-/padtrymac/padtrymac.txt
+link
+https://www.patreon.com/belmova
 💰 Падтрымаць!
 =EndDoubleButtons

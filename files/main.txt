@@ -19,7 +19,7 @@ DoubleButtons=
 local
 /padtrymka/padtrymka.txt
 🌍 Пра бота
-local
-/padtrymac/padtrymac.txt
+link
+https://www.patreon.com/belmova
 💰 Падтрымаць!
 =EndDoubleButtons

@@ -22,7 +22,7 @@ file=/zvarot/sajty/niama.docx
 local
 /main.txt
 🏠 На галоўную
-local
-/padtrymac/padtrymac.txt
+link
+https://www.patreon.com/belmova
 💰 Падтрымаць!
 =DoubleButtons

@@ -13,7 +13,7 @@ DoubleButtons=
 local
 /zvarot/zvarot.txt
 ⬅ Назад
-local
-/padtrymac/padtrymac.txt
+link
+https://www.patreon.com/belmova
 💰 Падтрымаць!
 =EndDoubleButtons

@@ -52,7 +52,7 @@ file=/doc/sud/zajava_20.docx
 local
 /doc/doc.txt
 ⬅ Назад
-local
-/padtrymac/padtrymac.txt
+link
+https://www.patreon.com/belmova
 💰 Падтрымаць!
 =EndDoubleButtons

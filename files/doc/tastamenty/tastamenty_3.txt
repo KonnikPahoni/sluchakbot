@@ -37,7 +37,7 @@ file=/doc/tastamenty/zajava_27.doc
 local
 /doc/doc.txt
 ⬅ Назад
-local
-/padtrymac/padtrymac.txt
+link
+https://www.patreon.com/belmova
 💰 Падтрымаць!
 =EndDoubleButtons
